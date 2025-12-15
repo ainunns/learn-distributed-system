@@ -5,4 +5,4 @@ python3 peer_node.py \
 	  --peers A@192.168.0.2:5000 B@192.168.0.3:5001 D@192.168.0.5:5003 \
 	  --logger 192.168.0.4 9999 \
 	  --offset-ms 600 \
-    --initiate-broadcast --msg "Hello from A!"
+	  --initiate-broadcast --msg "Hello from A!"
