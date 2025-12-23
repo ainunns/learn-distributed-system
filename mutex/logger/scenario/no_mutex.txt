@@ -1,0 +1,81 @@
+root@logger:~# bash run.sh
+[LOGGER] listening on 9000
+
+================ TRACE (last 30 events) ================
+-- Physical order --
+t=1766492469.455238 L=  1 V=[0, 1, 0, 0, 0] node=2 APPLY_LOCAL color=black
+t=1766492469.499887 L=  2 V=[0, 2, 0, 0, 0] node=2 REPL_SEND color=black
+t=1766492469.517036 L=  3 V=[1, 2, 0, 0, 0] node=1 REPL_RECV color=black
+t=1766492469.546767 L=  3 V=[0, 2, 1, 0, 0] node=3 REPL_RECV color=black
+t=1766492469.568567 L=  3 V=[0, 2, 0, 0, 1] node=5 REPL_RECV color=black
+t=1766492469.572037 L=  3 V=[0, 2, 0, 1, 0] node=4 REPL_RECV color=black
+t=1766492469.960425 L=  4 V=[0, 2, 2, 0, 0] node=3 APPLY_LOCAL color=magenta
+t=1766492469.965415 L=  5 V=[0, 2, 3, 0, 0] node=3 REPL_SEND color=magenta
+t=1766492469.980734 L=  6 V=[2, 2, 3, 0, 0] node=1 REPL_RECV color=magenta
+t=1766492470.005764 L=  6 V=[0, 3, 3, 0, 0] node=2 REPL_RECV color=magenta
+t=1766492470.026322 L=  6 V=[0, 2, 3, 2, 0] node=4 REPL_RECV color=magenta
+t=1766492470.028186 L=  6 V=[0, 2, 3, 0, 2] node=5 REPL_RECV color=magenta
+t=1766492470.294544 L=  7 V=[0, 4, 3, 0, 0] node=2 APPLY_LOCAL color=green
+t=1766492470.296034 L=  8 V=[0, 5, 3, 0, 0] node=2 REPL_SEND color=green
+t=1766492470.304234 L=  7 V=[3, 2, 3, 0, 0] node=1 APPLY_LOCAL color=blue
+t=1766492470.307478 L=  9 V=[4, 5, 3, 0, 0] node=1 REPL_RECV color=green
+t=1766492470.319665 L=  9 V=[0, 5, 4, 0, 0] node=3 REPL_RECV color=green
+t=1766492470.331792 L=  9 V=[0, 5, 3, 3, 0] node=4 REPL_RECV color=green
+t=1766492470.332343 L= 10 V=[5, 5, 3, 0, 0] node=1 REPL_SEND color=blue
+t=1766492470.335406 L=  9 V=[0, 5, 3, 0, 3] node=5 REPL_RECV color=green
+t=1766492470.361224 L= 11 V=[5, 6, 3, 0, 0] node=2 REPL_RECV color=blue
+t=1766492470.365594 L= 11 V=[5, 5, 5, 0, 0] node=3 REPL_RECV color=blue
+t=1766492470.372423 L= 11 V=[5, 5, 3, 4, 0] node=4 REPL_RECV color=blue
+t=1766492470.377213 L= 11 V=[5, 5, 3, 0, 4] node=5 REPL_RECV color=blue
+t=1766492470.554600 L= 11 V=[6, 5, 3, 0, 0] node=1 GET color
+t=1766492470.567770 L= 12 V=[5, 7, 3, 0, 0] node=2 GET color
+t=1766492470.575799 L= 12 V=[5, 5, 6, 0, 0] node=3 GET color
+t=1766492470.587671 L= 13 V=[5, 5, 7, 0, 0] node=3 GET color
+t=1766492470.607783 L= 12 V=[5, 5, 3, 5, 0] node=4 GET color
+t=1766492470.619964 L= 12 V=[5, 5, 3, 0, 5] node=5 GET color
+-- Lamport order --
+L=  1 t=1766492469.455238 V=[0, 1, 0, 0, 0] node=2 APPLY_LOCAL color=black
+L=  2 t=1766492469.499887 V=[0, 2, 0, 0, 0] node=2 REPL_SEND color=black
+L=  3 t=1766492469.517036 V=[1, 2, 0, 0, 0] node=1 REPL_RECV color=black
+L=  3 t=1766492469.546767 V=[0, 2, 1, 0, 0] node=3 REPL_RECV color=black
+L=  3 t=1766492469.572037 V=[0, 2, 0, 1, 0] node=4 REPL_RECV color=black
+L=  3 t=1766492469.568567 V=[0, 2, 0, 0, 1] node=5 REPL_RECV color=black
+L=  4 t=1766492469.960425 V=[0, 2, 2, 0, 0] node=3 APPLY_LOCAL color=magenta
+L=  5 t=1766492469.965415 V=[0, 2, 3, 0, 0] node=3 REPL_SEND color=magenta
+L=  6 t=1766492469.980734 V=[2, 2, 3, 0, 0] node=1 REPL_RECV color=magenta
+L=  6 t=1766492470.005764 V=[0, 3, 3, 0, 0] node=2 REPL_RECV color=magenta
+L=  6 t=1766492470.026322 V=[0, 2, 3, 2, 0] node=4 REPL_RECV color=magenta
+L=  6 t=1766492470.028186 V=[0, 2, 3, 0, 2] node=5 REPL_RECV color=magenta
+L=  7 t=1766492470.304234 V=[3, 2, 3, 0, 0] node=1 APPLY_LOCAL color=blue
+L=  7 t=1766492470.294544 V=[0, 4, 3, 0, 0] node=2 APPLY_LOCAL color=green
+L=  8 t=1766492470.296034 V=[0, 5, 3, 0, 0] node=2 REPL_SEND color=green
+L=  9 t=1766492470.307478 V=[4, 5, 3, 0, 0] node=1 REPL_RECV color=green
+L=  9 t=1766492470.319665 V=[0, 5, 4, 0, 0] node=3 REPL_RECV color=green
+L=  9 t=1766492470.331792 V=[0, 5, 3, 3, 0] node=4 REPL_RECV color=green
+L=  9 t=1766492470.335406 V=[0, 5, 3, 0, 3] node=5 REPL_RECV color=green
+L= 10 t=1766492470.332343 V=[5, 5, 3, 0, 0] node=1 REPL_SEND color=blue
+L= 11 t=1766492470.554600 V=[6, 5, 3, 0, 0] node=1 GET color
+L= 11 t=1766492470.361224 V=[5, 6, 3, 0, 0] node=2 REPL_RECV color=blue
+L= 11 t=1766492470.365594 V=[5, 5, 5, 0, 0] node=3 REPL_RECV color=blue
+L= 11 t=1766492470.372423 V=[5, 5, 3, 4, 0] node=4 REPL_RECV color=blue
+L= 11 t=1766492470.377213 V=[5, 5, 3, 0, 4] node=5 REPL_RECV color=blue
+L= 12 t=1766492470.567770 V=[5, 7, 3, 0, 0] node=2 GET color
+L= 12 t=1766492470.575799 V=[5, 5, 6, 0, 0] node=3 GET color
+L= 12 t=1766492470.607783 V=[5, 5, 3, 5, 0] node=4 GET color
+L= 12 t=1766492470.619964 V=[5, 5, 3, 0, 5] node=5 GET color
+L= 13 t=1766492470.587671 V=[5, 5, 7, 0, 0] node=3 GET color
+-- Vector partial order (layers of concurrent sets) --
+Layer 1: n2:APPLY_LOCAL:color=black@[0, 1, 0, 0, 0]
+Layer 2: n2:REPL_SEND:color=black@[0, 2, 0, 0, 0]
+Layer 3: n1:REPL_RECV:color=black@[1, 2, 0, 0, 0], n3:REPL_RECV:color=black@[0, 2, 1, 0, 0], n5:REPL_RECV:color=black@[0, 2, 0, 0, 1], n4:REPL_RECV:color=black@[0, 2, 0, 1, 0]
+Layer 4: n3:APPLY_LOCAL:color=magenta@[0, 2, 2, 0, 0]
+Layer 5: n3:REPL_SEND:color=magenta@[0, 2, 3, 0, 0]
+Layer 6: n1:REPL_RECV:color=magenta@[2, 2, 3, 0, 0], n2:REPL_RECV:color=magenta@[0, 3, 3, 0, 0], n5:REPL_RECV:color=magenta@[0, 2, 3, 0, 2], n4:REPL_RECV:color=magenta@[0, 2, 3, 2, 0]
+Layer 7: n2:APPLY_LOCAL:color=green@[0, 4, 3, 0, 0], n1:APPLY_LOCAL:color=blue@[3, 2, 3, 0, 0]
+Layer 8: n2:REPL_SEND:color=green@[0, 5, 3, 0, 0]
+Layer 9: n3:REPL_RECV:color=green@[0, 5, 4, 0, 0], n1:REPL_RECV:color=green@[4, 5, 3, 0, 0], n5:REPL_RECV:color=green@[0, 5, 3, 0, 3], n4:REPL_RECV:color=green@[0, 5, 3, 3, 0]
+Layer 10: n1:REPL_SEND:color=blue@[5, 5, 3, 0, 0]
+Layer 11: n2:REPL_RECV:color=blue@[5, 6, 3, 0, 0], n3:REPL_RECV:color=blue@[5, 5, 5, 0, 0], n4:REPL_RECV:color=blue@[5, 5, 3, 4, 0], n5:REPL_RECV:color=blue@[5, 5, 3, 0, 4], n1:GET:color@[6, 5, 3, 0, 0]
+Layer 12: n2:GET:color@[5, 7, 3, 0, 0], n3:GET:color@[5, 5, 6, 0, 0], n4:GET:color@[5, 5, 3, 5, 0], n5:GET:color@[5, 5, 3, 0, 5]
+Layer 13: n3:GET:color@[5, 5, 7, 0, 0]
+======================================================
